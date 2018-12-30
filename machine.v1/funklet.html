@@ -1,0 +1,89 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+ <head>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>Funklet Machine</title>
+   
+   
+   <link rel="stylesheet" href="/style/diagram.css"/>
+ </head>
+ <body>
+   <div id="outside-container">
+     <div id="diagram-container">
+       <div id="diagram">
+         <div id="decoration"></div>
+         <div id="stub-left" class="stub"></div>
+         <div id="stub-right" class="stub"></div>
+         <div class="tr modifiers"></div>
+         <div class="tr hat"></div>
+         <div class="tr snare"></div>
+         <div class="tr kick"></div>
+         <div id="mutes" class="hoveronly">
+           <div class="mute"></div>
+           <div class="mute"></div>
+           <div class="mute"></div>
+         </div>
+         <div id="jds" class="hoveronly">
+           <div class="jd"><div>-</div><div>+</div></div>
+           <div class="jd"><div>-</div><div>+</div></div>
+           <div class="jd"><div>-</div><div>+</div></div>
+         </div>
+         <div id="rates" class="hoveronly">
+           <div class="rate"><div class="meter"></div></div>
+           <div class="rate"><div class="meter"></div></div>
+           <div class="rate"><div class="meter"></div></div>
+         </div>
+         <div id="alts" class="hoveronly">
+            <div class="alt">&#8997;</div>
+            <div class="alt">&#8997;</div>
+            <div class="alt">&#8997;</div>
+          </div>
+       </div>
+       <div id="controls">
+         <form id="bpm-form">
+           <div id="indicator-outer">
+            <div id="indicator"></div>
+           </div>
+           <div id="unsupported">?</div>
+           <div id="explanation">Currently the Funklet machine only runs in Chrome (and Webkit nightlies, if that phrase means anything to you). It may soon run in Firefox too.</div>
+           <button class="control" id="start">&#9654;</button>
+           <button class="control" id="stop">&#9724;</button>
+           &nbsp;&nbsp;&nbsp;&nbsp;<span>@</span><input id="bpm" type="text" value="120"/><span>BPM</span>
+         </form>
+         <a href="#" id="half-time" style="left:180px" class="grey-button hoveronly">½</a>
+         <a href="#" id="save" target="_blank" style="left:220px" class="grey-button hoveronly">¶</a>
+         <a href="#" id="shortcuts" style="left:270px" class="grey-button hoveronly">⚡</a>
+         <div id="swing-meter" data-swing="0">
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+           <div></div>
+         </div>
+       </div>
+       <div id="shortcuts-box">
+         <ul>
+           <li>Holding a number 1-4 and clicking a cell jumps to a particular velocity.</li>
+           <li>Holding shift and hovering over cells will delete them.</li>
+           <li>Holding shift &amp; then a number 1-4 and hovering over cells with set them to that velocity.</li>
+           <li>Hit the space bar to restart the machine.</li>
+           <li>Hit 'r' over and over again to get more slapback reverb. (Shift+'r' to get less.)</li>
+           <li>Hit 'v' over and over again to get more volume. (Shift+'v' to get less.)</li>
+         </ul>
+       </div>
+     </div>
+   </div>
+   <script src="/script/jquery.js"></script>
+   <script src="/script/es5-shim.js"></script>
+   <script src="/script/functions.js"></script>
+   <script src="/script/funklet.js"></script>
+ </body>
+</html>
